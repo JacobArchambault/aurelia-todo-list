@@ -1,23 +1,19 @@
-import { Todo } from './interfaces/todo';
+import {Router, RouterConfiguration } from 'aurelia-router';
+import { PLATFORM } from 'aurelia-framework';
 
 export class App {
-  todos: Todo[] = [];
-  todoDescription = '';
+  router: Router;
 
-  addTodo() {
-    if (this.todoDescription) {
-      this.todos.push({
-        description: this.todoDescription,
-        done: false
-      });
-      this.todoDescription = '';
-    }
-  }
+  configureRouter(config: RouterConfiguration, router: Router) {
+    config.title = 'To do list';
+    config.options.pushState = true;
+    config.options.root = '/';
+    config.map([
+      { route: '', moduleId: PLATFORM.moduleName('components/todos/todos'), title: 'To do' }
+    ]);
 
-  removeTodo(todo: Todo) {
-    let index = this.todos.indexOf(todo);
-    if (index !== -1) {
-      this.todos.splice(index, 1);
-    }
+    this.router = router;
   }
 }
+
+

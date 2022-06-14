@@ -1,7 +1,4 @@
-interface Todo {
-  description: string;
-  done: boolean;
-}
+import { Todo } from './interfaces/todo';
 
 export class App {
   todos: Todo[] = [];

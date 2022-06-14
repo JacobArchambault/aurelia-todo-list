@@ -1,9 +1,9 @@
 import {bootstrap} from 'aurelia-bootstrapper';
-import {StageComponent} from 'aurelia-testing';
+import {ComponentTester, StageComponent} from 'aurelia-testing';
 import {PLATFORM} from 'aurelia-pal';
 
 describe('Stage App Component', () => {
-  let component;
+  let component: ComponentTester<any>;
 
   beforeEach(() => {
     component = StageComponent

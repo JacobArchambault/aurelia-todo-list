@@ -6,12 +6,16 @@ export class TodoList {
 
   addTodo() {
     if (this.todoDescription) {
-      this.todos.push({
-        description: this.todoDescription,
-        done: false
-      });
+      this.addOne();
       this.todoDescription = '';
     }
+  }
+
+  private addOne() {
+    this.todos.push({
+      description: this.todoDescription,
+      done: false
+    });
   }
 
   removeTodo(todo: Todo) {

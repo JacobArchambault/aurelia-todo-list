@@ -6,14 +6,14 @@ export class TodoList {
 
   addTodo() {
     if (this.todoDescription) {
-      this.addOne();
+      this.create(this.todoDescription);
       this.todoDescription = '';
     }
   }
 
-  private addOne() {
+  private create(todoDescription: string) {
     this.todos.push({
-      description: this.todoDescription,
+      description: todoDescription,
       done: false
     });
   }

@@ -1,6 +1,6 @@
 import { Todo } from '../../interfaces/todo';
 
-export class Todos {
+export class TodoList {
   todos: Todo[] = [];
   todoDescription = '';
 

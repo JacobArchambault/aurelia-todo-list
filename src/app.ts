@@ -9,7 +9,7 @@ export class App {
     config.options.pushState = true;
     config.options.root = '/';
     config.map([
-      { route: '', moduleId: PLATFORM.moduleName('components/todos/todos'), title: 'To do' }
+      { route: '', moduleId: PLATFORM.moduleName('components/todo-list/todo-list'), title: 'To do' }
     ]);
 
     this.router = router;

@@ -1,7 +1,10 @@
 import { Todo } from '../../interfaces/todo';
 
 export class TodoList {
-  todos: Todo[] = [];
+  todos: Todo[] = [
+    { description: "Make bed", done: true },
+    { description: "Take out trash", done: false }
+  ];
   todoDescription = '';
 
   addTodo() {

@@ -11,7 +11,6 @@ export class App {
     config.map([
       { route: '', moduleId: PLATFORM.moduleName('components/todo-list/todo-list'), title: 'To do' }
     ]);
-
     this.router = router;
   }
 }

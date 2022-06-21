@@ -6,12 +6,16 @@ export class App {
 
   addTodo() {
     if (this.todoDescription) {
-      this.todos.push({
-        description: this.todoDescription,
-        done: false
-      });
+      this.addOne(this.todoDescription);
       this.todoDescription = '';
     }
+  }
+
+  private addOne(todoDescription: string) {
+    this.todos.push({
+      description: todoDescription,
+      done: false
+    });
   }
 
   removeTodo(todo: Todo) {

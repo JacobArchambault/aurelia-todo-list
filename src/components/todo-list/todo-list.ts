@@ -5,16 +5,8 @@ export class TodoList {
     { description: "Make bed", done: true },
     { description: "Take out trash", done: false }
   ];
-  todoDescription = '';
 
-  addTodo() {
-    if (this.todoDescription) {
-      this.create(this.todoDescription);
-      this.todoDescription = '';
-    }
-  }
-
-  private create(todoDescription: string) {
+  addOne(todoDescription: string) {
     this.todos.push({
       description: todoDescription,
       done: false

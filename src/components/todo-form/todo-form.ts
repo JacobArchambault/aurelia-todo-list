@@ -1,8 +1,8 @@
 import { TodoList } from 'components/todo-list/todo-list';
 
 export class TodoForm {
-  todoDescription = '';
-  todoList: TodoList;
+  private todoDescription = '';
+  private todoList: TodoList;
 
   addTodo() {
     if (this.todoDescription) {

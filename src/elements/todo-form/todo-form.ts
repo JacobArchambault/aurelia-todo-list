@@ -1,4 +1,4 @@
-import { TodoList } from 'components/todo-list/todo-list';
+import { TodoList } from 'elements/todo-list/todo-list';
 
 export class TodoForm {
   private todoDescription = '';

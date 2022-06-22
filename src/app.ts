@@ -9,7 +9,7 @@ export class App {
     config.options.pushState = true;
     config.options.root = '/';
     config.map([
-      { route: '', moduleId: PLATFORM.moduleName('components/todo-form/todo-form'), title: 'To do' }
+      { route: '', moduleId: PLATFORM.moduleName('elements/todo-form/todo-form'), title: 'To do' }
     ]);
     this.router = router;
   }
